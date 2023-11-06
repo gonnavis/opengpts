@@ -33,7 +33,7 @@ export function ConfigList(props: {
       </div>
 
       <div className="text-xs font-semibold leading-6 text-gray-400 mt-4">
-        Your Bots
+        Your Saved Bots
       </div>
       <ul role="list" className="-mx-2 mt-2 space-y-1">
         {props.configs.map((chat) => (

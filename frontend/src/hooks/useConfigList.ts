@@ -72,6 +72,7 @@ export function useConfigList(
         ...configs.filter((c) => c.key !== saved.key),
         saved,
       ]);
+      setCurrent(saved.key);
     },
     [setConfigs]
   );
