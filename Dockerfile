@@ -4,9 +4,9 @@ WORKDIR /backend
 
 COPY ./backend .
 
-RUN pip install poetry && \
-  poetry config virtualenvs.create false && \
-  poetry install --no-interaction --no-ansi --only main
+RUN rm poetry.lock
+
+RUN pip install .
 
 COPY ./frontend/dist ./ui
 

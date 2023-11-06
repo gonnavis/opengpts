@@ -128,7 +128,6 @@ export OPENAI_API_KEY=...
 export OPENAI_DEPLOYMENT_NAME=...
 ```
 
-
 ### Tools
 
 One of the big benefits of having this be open source is that you can more easily add tools (directly in Python).
@@ -153,7 +152,10 @@ yarn build
 
 **2. Deploy to Google Cloud Run**
 
+You can deploy to GCP Cloud Run using the following command:
+
+First create a `.env.gcp.yaml` file with the contents from `.env.gcp.yaml.example` and fill in the values. Then run:
+
 ```shell
-cd backend
-make deploy_gcp
+gcloud run deploy langgizmo --source . --port 8001 --env-vars-file .env.gcp.yaml --allow-unauthenticated --region us-central1 --min-instances 1
 ```
